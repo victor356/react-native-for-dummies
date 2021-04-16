@@ -1,0 +1,3 @@
+[submodule "meteo-app"]
+	path = meteo-app
+	url = ./meteo-app
