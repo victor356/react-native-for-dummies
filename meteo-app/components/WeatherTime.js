@@ -5,7 +5,15 @@ import WeatherIcon from "./WeatherIcon";
 const WeatherTime = props => {
 
     const temperature = Math.floor(props.data.main.temp - 273.15);
-    const time = new Date(props.data.dt_txt).getHours();
+    //const temp =new Date(props.data.dt_txt);
+    //const time = parseFloat(temp.getHours());
+
+    let dateParam = props.data.dt_txt.split(/[\s-:]/);
+    dateParam[1] = (parseInt(dateParam[1], 10) - 1).toString();
+    const ret = new Date(...dateParam);
+    
+    const time = dateParam[3];
+    
     const icon = props.data.weather[0].icon;
     return (
         <View style={styles.container}>

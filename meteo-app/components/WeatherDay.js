@@ -3,7 +3,9 @@ import { StyleSheet, View, Text, Button, Dimensions, Platform } from "react-nati
 import WeatherIcon from "./WeatherIcon";
 const WeatherDay = props => {
     const dayOfWeek = ["Domenica", "Lunedi", "Martedi", "Mercoledi", "Giovedi", "Venerdi", "Sabato"];
-    const indexDay = new Date(props.data.dt_txt).getDay();
+
+    const indexDay = new Date(props.data.dt_txt.replace(/\s/, 'T')).getDay();
+
     const day = dayOfWeek[indexDay];
     const temperature = Math.floor(props.data.main.temp - 273.15);
     const icon = props.data.weather[0].icon;
@@ -26,6 +28,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         marginTop: 10,
+        backgroundColor:"grey"
         
     },
     day: {

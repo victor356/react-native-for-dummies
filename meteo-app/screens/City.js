@@ -11,6 +11,7 @@ const City = (props) => {
 
     //data structure
     const WeatherTimeData = weatherDayData.slice(0, 9);
+    
     const WeatherTimes = WeatherTimeData.map((item, index) => (
         <WeatherTime data={item} key={index} />
     ));
