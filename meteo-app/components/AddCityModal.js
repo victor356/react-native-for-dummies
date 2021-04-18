@@ -11,7 +11,8 @@ const AddCityModal = (props)=> {
    const handleChangedTest = (value) => {
         setText(value)
     }
-    addCityHandler = () => {
+
+    const addCityHandler = () => {
         if (text.trim() === "") {
             alert("Scrivi qualcosa");
             return
