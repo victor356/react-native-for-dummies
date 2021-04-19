@@ -14,16 +14,6 @@ import { colors } from "./utils/colors";
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-
-// function LogoTitle() {
-//   return (
-//     <Image
-//       style={{ width: 50, height: 50 }}
-//       source={require("./assets/plus.png")}
-//     />
-//   );
-// }
-
 const App = () => {
   return (
     <NavigationContainer>
